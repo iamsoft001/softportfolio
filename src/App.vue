@@ -1,32 +1,82 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view />
-  </div>
+  <v-app class="body">
+    <v-navigation-drawer
+     v-model="drawer"
+      :app="mobile" 
+      class="hidden-md-and-up"
+      color="deep-purple darken-5"
+      dark
+      >
+     <NavDrawer/>
+    </v-navigation-drawer>
+    <v-app-bar app color="deep-purple darken-5"  dark flat>
+      <v-toolbar-title> KEHINDE ADENIYI </v-toolbar-title>
+      <v-spacer></v-spacer>
+      <span class="hidden-md-and-up">
+        <v-btn @click.stop="drawer = !drawer"> Menu </v-btn>
+      </span>
+      <v-toolbar-items class="hidden-sm-and-down">
+        <v-btn 
+        text
+        item: to="/"
+        >
+          <v-icon small left >mdi-bank</v-icon>
+          Home
+        </v-btn>
+        <v-btn text item: to="/Project">
+          <v-icon small left>mdi-folder-multiple</v-icon>
+          Project
+        </v-btn>
+        <v-btn text item: to="/Contact">
+          <v-icon small left>mdi-phone</v-icon>
+          Contact Us
+        </v-btn>
+      </v-toolbar-items>
+    </v-app-bar>
+    
+
+    <v-main>
+      
+      <router-view></router-view>
+     
+    </v-main>
+    
+      
+   <Footer/>
+  </v-app>
 </template>
 
+<script>
+import Footer from '@/components/Footer.vue';
+import NavDrawer from '@/components/NavDrawer';
+export default {
+  
+  name: "App",
+  data: () => ({
+    drawer: false,
+  }),
+  components: {Footer,NavDrawer},
+  computed: {
+    mobile() {
+      return this.$vuetify.breakpoint.smAndDown 
+    }
+  },
+  watch: {
+    mobile(newValue) {
+      !newValue ? this.drawer = false : ''
+    }
+  },
+};
+</script>
+
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
+@import url('https://use.fontawesome.com/releases/v5.8.1/css/all.css');
+ *, :after, :before {
+    box-sizing: border-box;
+  }
+  .body{
+    margin: 0;
+    height: 100%;
+     text-align: center;
+  }
 </style>
