@@ -100,6 +100,7 @@ export default {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 845px;
+  height: 895px;
+  width: 100vw;
 }
 </style>

@@ -162,11 +162,7 @@ export default {
 </script>
 
 <style>
-.contact {
-  margin: 25px;
-  padding: 10px;
-  text-align: center;
-}
+
 
 .contact-background {
   background-color: rgb(55, 38, 131);
@@ -174,6 +170,7 @@ export default {
   background-position: center;
   background-size: cover;
   height: 845px;
+  width: 100vw;
 }
 .position-absolute {
   position: absolute;
