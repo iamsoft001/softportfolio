@@ -1,19 +1,24 @@
 <template>
-  <v-app class="body">
+  <v-app >
+    
     <v-navigation-drawer
      v-model="drawer"
       :app="mobile" 
       class="hidden-md-and-up"
       color="deep-purple darken-5"
       dark
+      right
       >
-     <NavDrawer/>
+      <v-row justify="end" class="pr-6 mt-2 mb-1">
+      <v-btn @click="drawer = false" text><v-icon>mdi-close</v-icon></v-btn>
+      </v-row>
+     <NavDrawer />
     </v-navigation-drawer>
-    <v-app-bar app color="deep-purple darken-5"  dark flat>
+    <v-app-bar app color="deep-purple darken-5"  dark flat fixed class="pa-0">
       <v-toolbar-title> KEHINDE ADENIYI </v-toolbar-title>
       <v-spacer></v-spacer>
       <span class="hidden-md-and-up">
-        <v-btn @click.stop="drawer = !drawer"> Menu </v-btn>
+        <v-btn @click.stop="drawer = !drawer" text> Menu </v-btn>
       </span>
       <v-toolbar-items class="hidden-sm-and-down">
         <v-btn 
@@ -33,16 +38,14 @@
         </v-btn>
       </v-toolbar-items>
     </v-app-bar>
-    
 
-    <v-main>
-      
+    <v-main class="pa-0 ma-0" app >
       <router-view></router-view>
-     
-    </v-main>
+     </v-main>
     
-      
+      <v-footer>
    <Footer/>
+      </v-footer>
   </v-app>
 </template>
 
@@ -69,14 +72,10 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 @import url('https://use.fontawesome.com/releases/v5.8.1/css/all.css');
  *, :after, :before {
     box-sizing: border-box;
   }
-  .body{
-    margin: 0;
-    height: 100%;
-     text-align: center;
-  }
+  
 </style>

@@ -1,8 +1,5 @@
 <template>
   <div>
-    <v-avatar>
-      <img src="image.jpg" />
-    </v-avatar>
     <v-list>
       <v-list-item v-for="item in items" :key="item.title" :to="item.to" link>
         <v-list-item-icon>

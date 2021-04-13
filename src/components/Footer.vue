@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <v-footer dark padless app fixed>
+  <div class="mt-5 pa-0">
+    <v-footer class="pa-0" app fixed>
       <v-card class="flex deep-purple darken-5 white--text text-center" flat tile>
         <div class="text-center">
           <v-btn v-for="icon in icons" :key="icon" class="mx-4" dark icon>

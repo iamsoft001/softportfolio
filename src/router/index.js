@@ -1,10 +1,8 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
-import Project from "@/components/Project.vue";
-import Contact from "@/components/Contact.vue";
-import Footer from "@/components/Footer.vue";
-
+import Project from "../views/Project.vue";
+import Contact from "../views/Contact.vue";
 Vue.use(VueRouter);
 
 const routes = [
@@ -14,19 +12,14 @@ const routes = [
     component: Home,
   },
   {
-    path: "/project",
-    name: "project",
+    path: "/Project",
+    name: "Project",
     component: Project,
   },
   {
     path: "/contact",
     name: "contact",
-    component: Contact,
-  },
-  {
-    path: "/footer",
-    name: "footer",
-    component: Footer,
+    component:Contact
   },
 ];
 
