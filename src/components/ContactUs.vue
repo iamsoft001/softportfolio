@@ -17,7 +17,7 @@
             <v-btn
               icon
               value="facebook"
-              href="https://www.facebook.com/adeniyikehinde.968/"
+              href="https://web.facebook.com/adeniyi.kehinde.963/"
               target="_blank"
             >
               <v-icon>mdi-facebook</v-icon>
@@ -31,7 +31,7 @@
             >
               <v-icon>mdi-twitter</v-icon>
             </v-btn>
-            <div >
+            <div>
               <span class="d-block" title="Soft Portfolio"
                 >Kinplus Technologies</span
               >
@@ -146,6 +146,5 @@ export default {
   background-image: url("/imagez4.jpg");
   background-size: cover;
   height: 100%;
-  width: 100vw;
 }
 </style>

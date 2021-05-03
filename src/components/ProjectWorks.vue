@@ -14,7 +14,7 @@
             {{ work.term3 }} <br />{{ work.term4 }}
           </v-card-subtitle>
           <v-card-actions>
-            <v-btn :href="work.link" target="blank">Check it Out</v-btn>
+            <v-btn :href="work.link" target="_blank">Check it Out</v-btn>
           </v-card-actions>
         </v-card>
       </v-col>
