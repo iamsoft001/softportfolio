@@ -12,7 +12,7 @@
               <v-btn
                 v-for="icon in icons"
                 :key="icon.idx"
-                class="mx-4"
+                class="mx-2"
                 :href="icon.src"
                 target="_blank"
                 dark
