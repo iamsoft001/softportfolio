@@ -29,12 +29,20 @@ export default {
     return {
       works: [
         {
-          src: "/newstylish.jpg",
+          src: "newstylish.jpg",
           term1: "Vuetify",
           term2: "JavaScript",
           term3: "CSS",
           term4: "Firebase",
           link: "https://stylish-o-interiors-iamsoft001.vercel.app",
+        },
+        {
+          src: "softeventz.jpg",
+          term1: "Vuetify",
+          term2: "JavaScript",
+          term3: "CSS",
+          term4: "Firebase",
+          link: "https://softeventz.netlify.app/",
         },
         {
           src: "newtodo.jpg",
@@ -66,7 +74,7 @@ export default {
       rgba(0, 0, 0, 0.6) 20%,
       rgba(0, 0, 0, 0.6)
     ),
-    url(/imagez7.jpg);
+    url(imagez7.jpg);
   background-size: cover;
   height: 100%;
 }

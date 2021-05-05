@@ -143,7 +143,7 @@ export default {
 <style scoped>
 .contact-background {
   background-color: rgb(55, 38, 131);
-  background-image: url("/imagez4.jpg");
+  background-image: url("imagez4.jpg");
   background-size: cover;
   height: 100%;
 }

@@ -68,7 +68,7 @@ export default {
 <style scoped>
 .main-background {
   background-color: rgb(207, 15, 233);
-  background-image: url("/imagez3.jpg");
+  background-image: url("imagez3.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
